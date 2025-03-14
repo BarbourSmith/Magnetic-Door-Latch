@@ -49,8 +49,8 @@
                 {
                     "atomType": "Molecule",
                     "name": "Latch Side",
-                    "x": 0.2757936507936508,
-                    "y": 0.6908077994428969,
+                    "x": 0.27380952380952384,
+                    "y": 0.6852367688022285,
                     "uniqueID": 1741972354574,
                     "ioValues": [],
                     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -833,8 +833,8 @@
                         {
                             "atomType": "Molecule",
                             "name": "Keep Out",
-                            "x": 0.7539682539682541,
-                            "y": 0.8217270194986073,
+                            "x": 0.7566137566137566,
+                            "y": 0.8802228412256267,
                             "uniqueID": 1741876080551,
                             "ioValues": [],
                             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -857,8 +857,8 @@
                                 {
                                     "atomType": "Molecule",
                                     "name": "Latch Side",
-                                    "x": 0.37037037037037035,
-                                    "y": 0.2562674094707521,
+                                    "x": 0.36706349206349204,
+                                    "y": 0.27019498607242337,
                                     "uniqueID": 1741876089069,
                                     "ioValues": [],
                                     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -1821,8 +1821,8 @@
                                 {
                                     "atomType": "Extrude",
                                     "name": "Extrude",
-                                    "x": 0.21164021164021166,
-                                    "y": 0.5041782729805014,
+                                    "x": 0.2189153439153439,
+                                    "y": 0.5459610027855153,
                                     "uniqueID": 1741876299958,
                                     "ioValues": [
                                         {
@@ -3587,7 +3587,7 @@
                                     "ioValues": [
                                         {
                                             "name": "number or geometry",
-                                            "ioValue": 1741982352844
+                                            "ioValue": 1741983166018
                                         }
                                     ],
                                     "description": "Connect geometry here to make it available in the next level up. "
@@ -3891,6 +3891,24 @@
                                         }
                                     ],
                                     "description": "Moves a shape laterally in X, Y, Z."
+                                },
+                                {
+                                    "atomType": "Tag",
+                                    "name": "Magnets",
+                                    "x": 0.7374338624338623,
+                                    "y": 0.7548746518105849,
+                                    "uniqueID": 1741983166018,
+                                    "ioValues": [
+                                        {
+                                            "name": "geometry",
+                                            "ioValue": 1741982352844
+                                        }
+                                    ],
+                                    "description": "Tags geometry so that it can be extracted later.",
+                                    "tags": [
+                                        "Magnets"
+                                    ],
+                                    "cutTag": false
                                 }
                             ],
                             "allConnectors": [
@@ -3917,10 +3935,10 @@
                                 },
                                 {
                                     "ap1Name": "geometry",
-                                    "ap2Name": "number or geometry",
-                                    "ap2Primary": false,
+                                    "ap2Name": "geometry",
+                                    "ap2Primary": true,
                                     "ap1ID": 1741982352844,
-                                    "ap2ID": 1741982238824
+                                    "ap2ID": 1741983166018
                                 },
                                 {
                                     "ap1Name": "geometry",
@@ -3956,6 +3974,13 @@
                                     "ap2Primary": false,
                                     "ap1ID": 1741982533815,
                                     "ap2ID": 1741982352844
+                                },
+                                {
+                                    "ap1Name": "geometry",
+                                    "ap2Name": "number or geometry",
+                                    "ap2Primary": false,
+                                    "ap1ID": 1741983166018,
+                                    "ap2ID": 1741982238824
                                 }
                             ],
                             "fileTypeVersion": 1,
@@ -4190,13 +4215,13 @@
                 {
                     "atomType": "Export",
                     "name": "Export",
-                    "x": 0.8518518518518517,
-                    "y": 0.7493036211699164,
+                    "x": 0.9193121693121693,
+                    "y": 0.2924791086350975,
                     "uniqueID": 1741972354693,
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": 1741972354342
+                            "ioValue": 1741983209721
                         },
                         {
                             "name": "Resolution (dpi)",
@@ -4204,7 +4229,7 @@
                         },
                         {
                             "name": "Part Name",
-                            "ioValue": "Door Latch"
+                            "ioValue": "Door Latch 2"
                         },
                         {
                             "name": "File Type",
@@ -4261,6 +4286,40 @@
                     ],
                     "description": "Extracts geometry containing the specified tag.",
                     "tagIndex": 0
+                },
+                {
+                    "atomType": "ExtractTag",
+                    "name": "Extract Tag",
+                    "x": 0.7334656084656085,
+                    "y": 0.33704735376044564,
+                    "uniqueID": 1741983184066,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1741972354414
+                        }
+                    ],
+                    "description": "Extracts geometry containing the specified tag.",
+                    "tag": "Magnets",
+                    "tagIndex": 4
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.8201058201058202,
+                    "y": 0.27019498607242337,
+                    "uniqueID": 1741983209721,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741983184066
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741972354342
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
                 }
             ],
             "allConnectors": [
@@ -4309,9 +4368,16 @@
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1741972354414,
+                    "ap2ID": 1741983184066
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
                     "ap2Primary": false,
                     "ap1ID": 1741972354342,
-                    "ap2ID": 1741972354693
+                    "ap2ID": 1741983209721
                 },
                 {
                     "ap1Name": "geometry",
@@ -4319,6 +4385,20 @@
                     "ap2Primary": false,
                     "ap1ID": 1741972597327,
                     "ap2ID": 1741972354686
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741983184066,
+                    "ap2ID": 1741983209721
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1741983209721,
+                    "ap2ID": 1741972354693
                 }
             ],
             "fileTypeVersion": 1,
