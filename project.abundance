@@ -14,12 +14,7 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1741972353431,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1741972354840
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -38,19 +33,14 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1741972354317,
-                    "ioValues": [
-                        {
-                            "name": "number or geometry",
-                            "ioValue": 1741972354503
-                        }
-                    ],
+                    "ioValues": [],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
                     "atomType": "Molecule",
                     "name": "Latch Side",
-                    "x": 0.2612433862433862,
-                    "y": 0.7214484679665739,
+                    "x": 0.2619047619047619,
+                    "y": 0.7520891364902507,
                     "uniqueID": 1741972354574,
                     "ioValues": [],
                     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -253,8 +243,8 @@
                         {
                             "atomType": "Extrude",
                             "name": "Extrude",
-                            "x": 0.42857142857142855,
-                            "y": 0.6963788300835655,
+                            "x": 0.4338624338624339,
+                            "y": 0.6991643454038997,
                             "uniqueID": 1741844111722,
                             "ioValues": [
                                 {
@@ -263,7 +253,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 10
+                                    "ioValue": 3.2
                                 }
                             ],
                             "description": "Extrudes a 2D shape. Input can be negitive. "
@@ -2340,7 +2330,14 @@
                                 }
                             ],
                             "fileTypeVersion": 1,
-                            "compiledBom": []
+                            "compiledBom": [
+                                {
+                                    "BOMitemName": "name",
+                                    "numberNeeded": 1,
+                                    "costUSD": 0,
+                                    "source": "www.example.com"
+                                }
+                            ]
                         },
                         {
                             "atomType": "Assembly",
